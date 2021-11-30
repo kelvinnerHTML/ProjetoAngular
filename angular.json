@@ -1,4 +1,12 @@
+
 {
+  "budgets": [
+    {
+       "type": "initial",
+       "maximumWarning": "2mb",
+       "maximumError": "5mb"
+    }
+ ],
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
     "analytics": false
@@ -86,6 +94,7 @@
             "browserTarget": "work:build"
           }
         },
+        
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {

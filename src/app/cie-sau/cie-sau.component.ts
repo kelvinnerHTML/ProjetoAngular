@@ -10,8 +10,8 @@ export class CieSauComponent  {
   users = [
     {id: 1, name: 'Saúde e Cura'},
     {id: 2, name: 'Química'},
-    {id: 3, name: 'iPhone 13'},
-    {id: 4, name: 'iPhone 13 mini'},
+    {id: 3, name: 'Física'},
+    {id: 4, name: 'Higine Oral'},
     {id: 5, name: 'Primeiros Socorros - básico'},
     {id: 6, name: 'Enfermagem Básica'},
     {id: 7, name: 'Ótica'},

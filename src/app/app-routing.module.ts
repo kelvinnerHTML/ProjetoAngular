@@ -18,12 +18,6 @@ const routes: Routes = [
     path:'', redirectTo:'/home', pathMatch:'full',
   },
     
-  {  component: MenuPositionExampleComponent,
-    path:'home',
-    data:  {
-      breadcrumb: 'Home'
-    },
-  },  
   {
     path:'AtivProf', component: AtivProfComponent,
     data: { 
@@ -33,7 +27,7 @@ const routes: Routes = [
   { 
     path:'AtivAgric', component: AtivAgricComponent,
     data: {
-      breadcrumb: 'AtividadesProfissionais'
+      breadcrumb: 'AtividadesAgricolas'
     },
     children: [
     {
