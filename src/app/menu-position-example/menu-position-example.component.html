@@ -1,0 +1,58 @@
+<mat-toolbar style="display: flex; background-color: rgb(186, 68, 17)">
+
+    <button mat-button [matMenuTriggerFor]="m" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" style=" width: 250px;display: flex; border-radius: 10px; 
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 1rem"
+    >
+      <mat-icon style="margin-right: 8px">menu</mat-icon>
+      <h1>Venda de bótons </h1>
+    </button>
+    <breadcrumb #parent>
+      <ol class="breadcrumb">
+      <ng-template ngFor let-route [ngForOf]="parent.breadcrumbs">
+        <li *ngIf="!route.terminal" class="breadcrumb-item">
+         <a href="" [routerLink]="[route.url]">{{route.displayName}}</a>
+        </li>
+        <li *ngIf="route.terminal" class="breadcrumb-item active">{{route.displayName}}</li>
+      </ng-template>
+
+      </ol>
+    </breadcrumb>
+
+    
+<mat-menu #m="matMenu">
+  
+  <button mat-menu-item routerLink onclick="open" [matMenuTriggerFor]="a">Categorias</button>
+</mat-menu>
+
+<mat-menu #a="matMenu" style="padding: 0px;">
+  
+  <p  style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;color:black;background-color: white;margin-top: 2px;padding: 10px; text-align:center">Escolha a Categoria de Compra!</p>
+  
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/ADRA">ADRA</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/AtivAgric">Atividades Agrícolas</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/HabDom">Habilidades domésticas</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/MesEsp">Mestrado em Especialidades</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/ATM">ATM</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/AtivRec">Atividades Recreativas</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/EstNat">Estudos da Natureza</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/CieSau">Ciências e Saúde</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/HabMan">Habilidades Manuais</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item routerLink="/AtivProf">Atividades Profissionais</button>
+
+</mat-menu>
+
+
+
+</mat-toolbar>
